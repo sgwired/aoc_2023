@@ -53,7 +53,7 @@ def add_part_numbers(diagram):
 
 
 def main():
-    file_path = sys.argv[1] or 'ex1.txt'
+    file_path = sys.argv[1] if len(sys.argv) > 1 else 'ex1.txt'
     diagram = read_lines_from_file(file_path)
     total = add_part_numbers(diagram)
     print("total parts:", total)
